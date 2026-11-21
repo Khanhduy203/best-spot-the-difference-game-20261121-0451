@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot the Difference — Sunny Garden</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>Spot the Difference <span>· Sunny Garden</span></h1>
+  <div class="stats">
+    <div class="stat"><span class="label">Found</span><strong id="foundCount">0 / 7</strong></div>
+    <div class="stat"><span class="label">Time</span><strong id="timer">2:00</strong></div>
+    <div class="stat"><span class="label">Score</span><strong id="score">0</strong></div>
+    <button id="hintBtn" type="button">Hint (2)</button>
+    <button id="restartBtn" type="button">Restart</button>
+  </div>
+</header>
+<main class="boards">
+  <section class="panel">
+    <h2>Picture A</h2>
+    <canvas id="canvasA" width="560" height="420"></canvas>
+  </section>
+  <section class="panel">
+    <h2>Picture B</h2>
+    <canvas id="canvasB" width="560" height="420"></canvas>
+  </section>
+</main>
+<p class="hint-line">Click a difference on either picture. A wrong click costs 3 seconds. Keys: <kbd>H</kbd> hint &middot; <kbd>R</kbd> restart</p>
+<div id="toast" class="toast" aria-live="polite"></div>
+<div id="overlay" class="overlay">
+  <div class="card">
+    <h2 id="overlayTitle">Find 7 differences</h2>
+    <p id="overlayText">Two pictures of the same sunny garden &mdash; but seven things changed. Find them all before the 2 minutes run out.</p>
+    <p id="overlayScore" class="overlay-score" hidden></p>
+    <button id="overlayBtn" type="button">Start playing</button>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
